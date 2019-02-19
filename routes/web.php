@@ -12,5 +12,9 @@
 */
 
 Route::get('/', function () {
-    return view('welcome');
+    return view('form');
 });
+
+Route::post('submitForm','UserDetailController@store');
+Route::get('/index','UserDetailController@index');
+Route::get('/downloadPDF/{id}','UserDetailController@downloadPDF');
